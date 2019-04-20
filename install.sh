@@ -55,17 +55,17 @@ mkdir log
 touch log/error.log
 touch log/access.log
 touch log/v2ray-mu.log
-wget https://raw.githubusercontent.com/tonychanczm/easy-v2ray-mu/dev/cfg.json
-wget https://github.com/tonychanczm/easy-v2ray-mu/releases/download/v1.1/v2mctl
-wget https://raw.githubusercontent.com/tonychanczm/easy-v2ray-mu/dev/mu.conf
+wget https://raw.githubusercontent.com/kuailezhiyuan/easy-v2ray-mu/dev/cfg.json
+wget https://github.com/kuailezhiyuan/easy-v2ray-mu/releases/download/v1.1/v2mctl
+wget https://raw.githubusercontent.com/kuailezhiyuan/easy-v2ray-mu/dev/mu.conf
 sed -i "s;##mu_uri##;$mu_uri;g" mu.conf
 sed -i "s;##mu_key##;$mu_key;g" mu.conf
 sed -i "s;##node_id##;$node_id;g" mu.conf
-wget https://raw.githubusercontent.com/tonychanczm/easy-v2ray-mu/dev/run.sh
-wget https://raw.githubusercontent.com/tonychanczm/easy-v2ray-mu/dev/stop.sh
-wget https://raw.githubusercontent.com/tonychanczm/easy-v2ray-mu/dev/cleanLogs.sh
-wget https://raw.githubusercontent.com/tonychanczm/easy-v2ray-mu/dev/catLogs.sh
-wget https://raw.githubusercontent.com/tonychanczm/easy-v2ray-mu/dev/status.sh
+wget https://raw.githubusercontent.com/kuailezhiyuan/easy-v2ray-mu/dev/run.sh
+wget https://raw.githubusercontent.com/kuailezhiyuan/easy-v2ray-mu/dev/stop.sh
+wget https://raw.githubusercontent.com/kuailezhiyuan/easy-v2ray-mu/dev/cleanLogs.sh
+wget https://raw.githubusercontent.com/kuailezhiyuan/easy-v2ray-mu/dev/catLogs.sh
+wget https://raw.githubusercontent.com/kuailezhiyuan/easy-v2ray-mu/dev/status.sh
 chmod +x *
 echo "30 4 * * * cd $(readlink -f .) && ./run.sh">> /var/spool/cron/root
 echo "* * * * * cd $(readlink -f .) && ./status.sh">> /var/spool/cron/root
